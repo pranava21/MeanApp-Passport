@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="centered">
+		<div class="display-3">
+			Login Here
+		</div>
+	</div>
+	<br>
+	<br>
+
+	<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<label class="control-label" for="readOnlyInput">Email ID</label>
+				<input type="email" class="form-control" id="emailId" placeholder="email@example.com" formControlName="emailId">
+			</fieldset>
+		</div>
+	
+		<br>
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<label class="control-label" for="readOnlyInput">Password</label>
+				<input type="password" class="form-control" id="password" placeholder="Password goes here" formControlName="password">
+			</fieldset>
+		</div>
+	
+		<br>
+	
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<button type="submit" class="btn btn-primary button" id="loginButton">Login</button>
+			</fieldset>
+		</div>
+	</form>
+	<br>
+</div>

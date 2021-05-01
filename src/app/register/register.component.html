@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="centered">
+		<div class="display-3">
+			Register Here
+		</div>
+	</div>
+	<br>
+	<br>
+	
+	<form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<label class="control-label" for="readOnlyInput">Name</label>
+				<input type="text" class="form-control" id="name" placeholder="Name" formControlName="name">
+			</fieldset>
+		</div>
+	
+		<br>
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<label class="control-label" for="readOnlyInput">Email ID</label>
+				<input type="email" class="form-control" id="emailId" placeholder="email@example.com" formControlName="emailId">
+			</fieldset>
+		</div>
+	
+		<br>
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<label class="control-label" for="readOnlyInput">Password</label>
+				<input type="password" class="form-control" id="password" placeholder="Password goes here" formControlName="password">
+			</fieldset>
+		</div>
+	
+		<br>
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<label class="control-label" for="readOnlyInput">Confirm Password</label>
+				<input type="password" class="form-control" id="confirmPassword" placeholder="Retype your Password" formControlName="password2">
+			</fieldset>
+		</div>
+	
+		<br>
+		<div class="form-group">
+			<fieldset data-children-count="1">
+				<button type="submit" class="btn btn-primary button" id="registerButton">Register Yourself</button>
+			</fieldset>
+		</div>
+	</form>
+	
+	<div class="nav-item">
+		Already registered? <a routerLink="/login" >Login</a>
+	</div>
+	
+	<br>
+</div>

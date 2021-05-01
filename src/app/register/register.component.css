@@ -1,0 +1,20 @@
+.container{
+	position: center;
+	font-size: large;
+}
+
+input{
+	font-size: medium;
+}
+
+.centered{
+	text-align: center;
+}
+
+.nav-item{
+	font-size: medium;
+}
+
+button{
+	font-size: large;
+}

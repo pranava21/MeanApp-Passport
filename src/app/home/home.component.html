@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="jumbotron">
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-3"></div>
+			<div class="display-3">
+				Register/Login
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-3"></div>
+			<br />
+			<br />
+			<button routerLink="/register" class="btn btn-primary btn-lg btn-block col-6" [disabled]="this.sharedService.isLoggedIn">
+				Register
+			</button>
+			<div class="col-4"></div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-3"></div>
+			<button routerLink="/login" class="btn btn-secondary btn-lg btn-block col-6" [disabled]="this.sharedService.isLoggedIn">
+				Login
+			</button>
+		</div>
+		<br>
+		<div *ngIf="this.sharedService.isLoggedIn" style="text-align: center;">
+			<span>You are already Logged in!</span>
+		</div>
+	</div>
+</div>
