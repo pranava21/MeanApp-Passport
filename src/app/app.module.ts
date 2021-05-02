@@ -15,12 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {
-	MatError,
-	MatFormField,
-	MatFormFieldModule,
-	MatLabel,
-} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { UserinfoComponent } from './userinfo/userinfo.component';
+import { UserinfoService } from './userinfo.service';
 
 @NgModule({
 	declarations: [
@@ -29,6 +26,7 @@ import {
 		LoginComponent,
 		RegisterComponent,
 		DashboardComponent,
+		UserinfoComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -42,7 +40,7 @@ import {
 		MatIconModule,
 		MatFormFieldModule,
 	],
-	providers: [LoginRegisterService, SharedService],
+	providers: [LoginRegisterService, SharedService, UserinfoService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
