@@ -4,24 +4,15 @@ This project is to test out the authentication using Passport.js to login and lo
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://127.0.0.1:4200/`. The app will automatically reload if you change any of the source files.
+Because the authentication is done by Passport.js, the host must not be localhost.
 
-## Code scaffolding
+## Endpoints
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The Express server is running on port 3000.
+The End Points used thus far are:
+	1. /login: Used to authenticate and log the user in.
+	2. /user: To view the dashboard. It also makes sure the user is logged in, other wise error is thrown.
+	3. /register: To register a new User.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The database used is MongoDB for the application.
